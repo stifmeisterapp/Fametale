@@ -41,5 +41,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>segoeui_0</string>
+		<string>segoeuib_0</string>
+		<string>segoeuii_0</string>
+		<string>SEGOEUIL_0</string>
+		<string>segoeuisl</string>
+		<string>segoeuiz_0</string>
+		<string>seguibl</string>
+		<string>seguibli</string>
+		<string>seguili</string>
+		<string>seguisb_0</string>
+		<string>seguisbi</string>
+		<string>seguisli</string>
+	</array>
 </dict>
 </plist>
