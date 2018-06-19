@@ -43,12 +43,19 @@ class VarificationVC: UIViewController {
         
         
     }
+    //MARK:- ACTIONS
+    //MARK:
     
+    @IBAction func btnNavigationTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension VarificationVC: VPMOTPViewDelegate {
     func hasEnteredAllOTP(hasEntered: Bool) -> Bool {
         print("Has entered all OTP? \(hasEntered)")
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        self.navigationController?.pushViewController(vc!, animated: true)
         
         return enteredOtp == "12345"
     }

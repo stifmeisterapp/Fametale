@@ -32,4 +32,18 @@ class ForgotPasswordVC: UIViewController {
         btnSendRef.layer.cornerRadius = 5
         btnSendRef.layer.masksToBounds = true
     }
+    
+    //MARK:- OUTLETS
+    //MARK:
+    
+    @IBAction func btnNavigationTapped(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func btnSendTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInVC") as? SignInVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }

@@ -14,6 +14,7 @@ class SignInVC: UIViewController {
     //MARK:
     @IBOutlet weak var btnSignInRef: UIButton!
     @IBOutlet weak var lblNewToFametale: UILabel!
+    @IBOutlet weak var lblForgotPassword: UILabel!
     //MARK:- VARIABLES
     //MARK:
     let gradient = Gradient.singletonGradientObj
@@ -21,6 +22,10 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         initialSetup()
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     //MARK:- METHODS
@@ -38,6 +43,51 @@ class SignInVC: UIViewController {
         attributedText.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: textRange)
         attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red: 74.0/255, green: 192.0/255, blue: 194.0/255, alpha: 1.0), range: textRange)
         lblNewToFametale.attributedText = attributedText
+        
+        
+        lblNewToFametale.isUserInteractionEnabled = true // Remember to do this
+        let tapLblNewToFametale: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(newtoFametale))
+        lblNewToFametale.addGestureRecognizer(tapLblNewToFametale)
+        
+        lblForgotPassword.isUserInteractionEnabled = true // Remember to do this
+        let tapLblForgotPassword: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(forgotPassword))
+        lblForgotPassword.addGestureRecognizer(tapLblForgotPassword)
+    }
+    
+    @objc func newtoFametale(){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @objc func forgotPassword(){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    //MARK:- ACTIONS
+    //MARK:
+    @IBAction func btnSignInTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
+    
+    @IBAction func btnFBLoginTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func btnInstaLoginTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func btnGoogleLoginTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
     }
 }
 

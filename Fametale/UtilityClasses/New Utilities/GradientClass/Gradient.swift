@@ -24,6 +24,7 @@ class Gradient{
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         gradientLayer.frame = bounds
+        gradientLayer.name = "masklayer"
         return gradientLayer
     }
 }

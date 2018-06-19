@@ -10,6 +10,13 @@ import UIKit
 
 class VideosCell: UITableViewCell {
 
+    //MARK:- OUTLETS
+    @IBOutlet weak var imgVideo: UIImageView!
+    
+    @IBOutlet weak var btnShareRef: UIButton!
+    @IBOutlet weak var btnDownloadRef: UIButton!
+    @IBOutlet weak var btnCommentRef: UIButton!
+    @IBOutlet weak var btnRatingRef: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

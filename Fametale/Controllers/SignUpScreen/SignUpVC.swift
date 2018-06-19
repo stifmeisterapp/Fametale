@@ -41,7 +41,24 @@ class SignUpVC: UIViewController {
         attributedText.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: textRange)
         attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red: 74.0/255, green: 192.0/255, blue: 194.0/255, alpha: 1.0), range: textRange)
         lblAlreadyHaveAccount.attributedText = attributedText
+        
+        lblAlreadyHaveAccount.isUserInteractionEnabled = true // Remember to do this
+        let tapLblAlreadyHaveAccount: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(lblAlreadyHaveAccountTapped))
+        lblAlreadyHaveAccount.addGestureRecognizer(tapLblAlreadyHaveAccount)
     }
+    
+    @objc func lblAlreadyHaveAccountTapped(){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInVC") as? SignInVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    //MARK:- ACTION
+    //MARK:
 
+    @IBAction func btnSignUpTapped(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "VarificationVC") as? VarificationVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 }
 

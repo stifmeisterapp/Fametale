@@ -84,7 +84,7 @@ extension UIView {
         }
     }
     
-   
+    
     
 }
 
@@ -93,16 +93,16 @@ extension UIView {
 extension UIView {
     
     func applyGradient(btn: UIView,with CornerRadius: Float) {
-    
-//        let gradient:CAGradientLayer = CAGradientLayer()
-//        gradient.colors = [GlobleConstants.gradientColorTop.cgColor, GlobleConstants.gradientColorBottom.cgColor]
-//        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-//        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-//        btn.layer.masksToBounds = true
-//        btn.clipsToBounds = true
-//        gradient.frame = btn.bounds
-//        gradient.cornerRadius = CGFloat(CornerRadius)
-//        btn.layer.addSublayer(gradient)
+        
+        //        let gradient:CAGradientLayer = CAGradientLayer()
+        //        gradient.colors = [GlobleConstants.gradientColorTop.cgColor, GlobleConstants.gradientColorBottom.cgColor]
+        //        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        //        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        //        btn.layer.masksToBounds = true
+        //        btn.clipsToBounds = true
+        //        gradient.frame = btn.bounds
+        //        gradient.cornerRadius = CGFloat(CornerRadius)
+        //        btn.layer.addSublayer(gradient)
         
     }
     
@@ -125,7 +125,7 @@ extension UIView {
         self.layer.add(shakeGroup, forKey: "shakeIt")
     }
     
-
+    
 }
 
 //Mark: extension for round two cornor
@@ -188,43 +188,43 @@ extension String
 //#MARK: - Extension UIApplication
 
 extension UIApplication {
-  var statusBarView: UIView? {
-    return value(forKey: "statusBar") as? UIView
-  }
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
+    }
 }
 
 
 //#MARK: - Extension TextField Placeholder
 
 extension UITextField{
-  
-  @IBInspectable var placeHolderColor: UIColor? {
-    get {
-      return self.placeHolderColor
-    }
-    set {
-        self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
-    }
-  }
-  
-  func lenth()-> Int{
     
-    
-    return self.text!.characters.count
-    
-  }
-  
-        func useUnderline() {
-            let border = CALayer()
-            let borderWidth = CGFloat(1.0)
-            border.borderColor = UIColor.lightGray.cgColor
-            border.frame = CGRect(origin: CGPoint(x: 0,y :self.frame.size.height - borderWidth), size: CGSize(width: self.frame.size.width, height: self.frame.size.height))
-            border.borderWidth = borderWidth
-            self.layer.addSublayer(border)
-            self.layer.masksToBounds = true
+    @IBInspectable var placeHolderColor: UIColor? {
+        get {
+            return self.placeHolderColor
         }
-   
-   
+        set {
+            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
+        }
+    }
+    
+    func lenth()-> Int{
+        
+        
+        return self.text!.characters.count
+        
+    }
+    
+    func useUnderline() {
+        let border = CALayer()
+        let borderWidth = CGFloat(1.0)
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(origin: CGPoint(x: 0,y :self.frame.size.height - borderWidth), size: CGSize(width: self.frame.size.width, height: self.frame.size.height))
+        border.borderWidth = borderWidth
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
+    
     
 }
 
@@ -234,15 +234,15 @@ extension UIViewController {
     
     
     
-  func hideKeyboardWhenTappedAround() {
+    func hideKeyboardWhenTappedAround() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
     
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-    view.addGestureRecognizer(tap)
-  }
-  
     @objc func dismissKeyboard() {
-    view.endEditing(true)
-  }
+        view.endEditing(true)
+    }
 }
 
 //#MARK: - Double
@@ -256,74 +256,74 @@ extension Double {
 //#MARK: - Image Extension
 
 extension UIImage {
-  
     
-  func maskWithColor(_ color: UIColor) -> UIImage? {
-    let maskImage = cgImage!
     
-    let width = size.width
-    let height = size.height
-    let bounds = CGRect(x: 0, y: 0, width: width, height: height)
-    
-    let colorSpace = CGColorSpaceCreateDeviceRGB()
-    let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
-    let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
-    
-    context.clip(to: bounds, mask: maskImage)
-    context.setFillColor(color.cgColor)
-    context.fill(bounds)
-    
-    if let cgImage = context.makeImage() {
-      let coloredImage = UIImage(cgImage: cgImage)
-      return coloredImage
-    } else {
-      return nil
+    func maskWithColor(_ color: UIColor) -> UIImage? {
+        let maskImage = cgImage!
+        
+        let width = size.width
+        let height = size.height
+        let bounds = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
+        
+        context.clip(to: bounds, mask: maskImage)
+        context.setFillColor(color.cgColor)
+        context.fill(bounds)
+        
+        if let cgImage = context.makeImage() {
+            let coloredImage = UIImage(cgImage: cgImage)
+            return coloredImage
+        } else {
+            return nil
+        }
     }
-  }
-  
     
-  func resizeImage(image:UIImage, maxHeight:Float, maxWidth:Float) -> UIImage
-  {
-    var actualHeight:Float = Float(image.size.height)
-    var actualWidth:Float = Float(image.size.width)
     
-    var imgRatio:Float = actualWidth/actualHeight
-    let maxRatio:Float = maxWidth/maxHeight
-    
-    if (actualHeight > maxHeight) || (actualWidth > maxWidth)
+    func resizeImage(image:UIImage, maxHeight:Float, maxWidth:Float) -> UIImage
     {
-      if(imgRatio < maxRatio)
-      {
-        imgRatio = maxHeight / actualHeight;
-        actualWidth = imgRatio * actualWidth;
-        actualHeight = maxHeight;
-      }
-      else if(imgRatio > maxRatio)
-      {
-        imgRatio = maxWidth / actualWidth;
-        actualHeight = imgRatio * actualHeight;
-        actualWidth = maxWidth;
-      }
-      else
-      {
-        actualHeight = maxHeight;
-        actualWidth = maxWidth;
-      }
+        var actualHeight:Float = Float(image.size.height)
+        var actualWidth:Float = Float(image.size.width)
+        
+        var imgRatio:Float = actualWidth/actualHeight
+        let maxRatio:Float = maxWidth/maxHeight
+        
+        if (actualHeight > maxHeight) || (actualWidth > maxWidth)
+        {
+            if(imgRatio < maxRatio)
+            {
+                imgRatio = maxHeight / actualHeight;
+                actualWidth = imgRatio * actualWidth;
+                actualHeight = maxHeight;
+            }
+            else if(imgRatio > maxRatio)
+            {
+                imgRatio = maxWidth / actualWidth;
+                actualHeight = imgRatio * actualHeight;
+                actualWidth = maxWidth;
+            }
+            else
+            {
+                actualHeight = maxHeight;
+                actualWidth = maxWidth;
+            }
+        }
+        
+        let rect:CGRect = CGRect(x: 0.0, y: 0.0, width: CGFloat(actualWidth), height: CGFloat(actualHeight))
+        UIGraphicsBeginImageContext(rect.size)
+        image.draw(in: rect)
+        
+        let img:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageData:NSData = UIImageJPEGRepresentation(img, 1.0)! as NSData
+        UIGraphicsEndImageContext()
+        
+        return UIImage(data: imageData as Data)!
+        
     }
     
-    let rect:CGRect = CGRect(x: 0.0, y: 0.0, width: CGFloat(actualWidth), height: CGFloat(actualHeight))
-    UIGraphicsBeginImageContext(rect.size)
-    image.draw(in: rect)
     
-    let img:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-    let imageData:NSData = UIImageJPEGRepresentation(img, 1.0)! as NSData
-    UIGraphicsEndImageContext()
-    
-    return UIImage(data: imageData as Data)!
-    
-  }
-  
-  
 }
 
 //#MARK:- random color
@@ -430,15 +430,15 @@ extension UIImageView
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         targetImageView?.addSubview(blurEffectView)
         
+    }
+    
+    
 }
 
-
-}
-
- private var __maxLengths = [UITextField: Int]()
+private var __maxLengths = [UITextField: Int]()
 
 extension UITextField {
-
+    
     @IBInspectable var maxLength: Int {
         get {
             guard let l = __maxLengths[self] else {
@@ -465,7 +465,31 @@ extension String
             return self
         }
         return String( Array(self).prefix(upTo: n) )
+    }
+    
+    
 }
 
 
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text:String) -> NSMutableAttributedString {
+        
+        let attrs : [NSAttributedStringKey : Any] = [
+            NSAttributedStringKey.font : UIFont(name: "Montserrat-Bold", size: 12)!,
+            NSAttributedStringKey.foregroundColor : UIColor.white,
+            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
+        let boldString = NSMutableAttributedString(string: text, attributes: attrs)
+        self.append(boldString)
+        return self
+    }
+    
+    @discardableResult func normal(_ text:String)->NSMutableAttributedString {
+        let attrs : [NSAttributedStringKey : Any] = [
+            NSAttributedStringKey.font : UIFont(name: "Montserrat-Regular", size: 12)!,
+            NSAttributedStringKey.foregroundColor : UIColor.white
+        ]
+        let normal =  NSAttributedString(string: text,  attributes:attrs)
+        self.append(normal)
+        return self
+    }
 }
