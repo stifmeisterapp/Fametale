@@ -10,6 +10,8 @@ import UIKit
 
 class VarificationVC: UIViewController {
     
+    
+    
     @IBOutlet weak var otpView: VPMOTPView!
     
     var enteredOtp: String = ""
@@ -54,10 +56,10 @@ class VarificationVC: UIViewController {
 extension VarificationVC: VPMOTPViewDelegate {
     func hasEnteredAllOTP(hasEntered: Bool) -> Bool {
         print("Has entered all OTP? \(hasEntered)")
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
-        self.navigationController?.pushViewController(vc!, animated: true)
+//let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+//        self.navigationController?.pushViewController(vc!, animated: true)
         
-        return enteredOtp == "12345"
+        return enteredOtp == "1234"
     }
     
     func shouldBecomeFirstResponderForOTP(otpFieldIndex index: Int) -> Bool {

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F153ACA20CA8217003D14EB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F153AC920CA8217003D14EB /* SignInVC.swift */; };
 		4F153AD620CA9F01003D14EB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F153AD520CA9F01003D14EB /* SignUpVC.swift */; };
-		4F153ADD20CAC117003D14EB /* VPMOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F153ADB20CAC117003D14EB /* VPMOTPTextField.swift */; };
-		4F153ADE20CAC117003D14EB /* VPMOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F153ADC20CAC117003D14EB /* VPMOTPView.swift */; };
 		4F153AE220CAC1A6003D14EB /* VarificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F153AE120CAC1A6003D14EB /* VarificationVC.swift */; };
 		4F17CCA920CA6A9C00944CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17CCA820CA6A9C00944CC0 /* AppDelegate.swift */; };
 		4F17CCAB20CA6A9C00944CC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17CCAA20CA6A9C00944CC0 /* ViewController.swift */; };
@@ -53,6 +51,8 @@
 		4F92EA3620CBF6560063CFAA /* Home1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92EA3520CBF6560063CFAA /* Home1VC.swift */; };
 		4F92EA3920CC03750063CFAA /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92EA3820CC03750063CFAA /* CommentsVC.swift */; };
 		4FA209B220D00CA2001BDBA2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA209B120D00CA2001BDBA2 /* TabBarVC.swift */; };
+		4FC9967120DBB57A00844884 /* VPMOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9966F20DBB57900844884 /* VPMOTPTextField.swift */; };
+		4FC9967220DBB57A00844884 /* VPMOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9967020DBB57900844884 /* VPMOTPView.swift */; };
 		4FE76CA920CF863000564814 /* ProfileRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE76CA820CF863000564814 /* ProfileRatingVC.swift */; };
 		4FE76CAC20CF8A5100564814 /* RequestSentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE76CAB20CF8A5100564814 /* RequestSentVC.swift */; };
 		4FE76CAF20CF8D6600564814 /* OtherProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE76CAE20CF8D6600564814 /* OtherProfileVC.swift */; };
@@ -77,8 +77,6 @@
 		40FF37B3E32F78C01E3EBF67 /* Pods_Fametale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fametale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F153AC920CA8217003D14EB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4F153AD520CA9F01003D14EB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		4F153ADB20CAC117003D14EB /* VPMOTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPMOTPTextField.swift; sourceTree = "<group>"; };
-		4F153ADC20CAC117003D14EB /* VPMOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPMOTPView.swift; sourceTree = "<group>"; };
 		4F153AE120CAC1A6003D14EB /* VarificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarificationVC.swift; sourceTree = "<group>"; };
 		4F17CCA520CA6A9C00944CC0 /* Fametale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fametale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F17CCA820CA6A9C00944CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +133,8 @@
 		4F92EA3520CBF6560063CFAA /* Home1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home1VC.swift; sourceTree = "<group>"; };
 		4F92EA3820CC03750063CFAA /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		4FA209B120D00CA2001BDBA2 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		4FC9966F20DBB57900844884 /* VPMOTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPMOTPTextField.swift; sourceTree = "<group>"; };
+		4FC9967020DBB57900844884 /* VPMOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPMOTPView.swift; sourceTree = "<group>"; };
 		4FE76CA820CF863000564814 /* ProfileRatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRatingVC.swift; sourceTree = "<group>"; };
 		4FE76CAB20CF8A5100564814 /* RequestSentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSentVC.swift; sourceTree = "<group>"; };
 		4FE76CAE20CF8D6600564814 /* OtherProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileVC.swift; sourceTree = "<group>"; };
@@ -175,19 +175,10 @@
 		4F153AD720CAB912003D14EB /* New Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4FC9966E20DBB57900844884 /* OTPClasses */,
 				4F646EB620CB9591003F03F0 /* GradientClass */,
-				4F153ADA20CAC117003D14EB /* OTPClasses */,
 			);
 			path = "New Utilities";
-			sourceTree = "<group>";
-		};
-		4F153ADA20CAC117003D14EB /* OTPClasses */ = {
-			isa = PBXGroup;
-			children = (
-				4F153ADB20CAC117003D14EB /* VPMOTPTextField.swift */,
-				4F153ADC20CAC117003D14EB /* VPMOTPView.swift */,
-			);
-			path = OTPClasses;
 			sourceTree = "<group>";
 		};
 		4F153AE020CAC17C003D14EB /* VarificationScreen */ = {
@@ -557,6 +548,15 @@
 			path = CommentsScreen;
 			sourceTree = "<group>";
 		};
+		4FC9966E20DBB57900844884 /* OTPClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4FC9966F20DBB57900844884 /* VPMOTPTextField.swift */,
+				4FC9967020DBB57900844884 /* VPMOTPView.swift */,
+			);
+			path = OTPClasses;
+			sourceTree = "<group>";
+		};
 		4FE76CA720CF861000564814 /* ProfileRatingScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,14 +741,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fametale/Pods-Fametale-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AARatingBar/AARatingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AARatingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatRatingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -769,11 +773,11 @@
 				4F153ACA20CA8217003D14EB /* SignInVC.swift in Sources */,
 				4F71E1EB20CE96A5007A30C8 /* MoreVC.swift in Sources */,
 				4F17CCC120CA6B8300944CC0 /* Extensions.swift in Sources */,
+				4FC9967120DBB57A00844884 /* VPMOTPTextField.swift in Sources */,
 				4F71E1FC20CEB577007A30C8 /* TermsAndConditionsVC.swift in Sources */,
 				4FE76CAC20CF8A5100564814 /* RequestSentVC.swift in Sources */,
 				4F71E1D520CE7403007A30C8 /* ShareScreenVC.swift in Sources */,
 				4F71E1D820CE747F007A30C8 /* ShareXib.swift in Sources */,
-				4F153ADE20CAC117003D14EB /* VPMOTPView.swift in Sources */,
 				4FE76CB420CF908F00564814 /* MyContactsVC.swift in Sources */,
 				4F71E1DE20CE8477007A30C8 /* TrendingVC.swift in Sources */,
 				4F542AC220CE4C4700FB5872 /* SearchXibs.swift in Sources */,
@@ -790,7 +794,6 @@
 				4F71E20520CEBBE6007A30C8 /* Chat2VC.swift in Sources */,
 				4F17CCA920CA6A9C00944CC0 /* AppDelegate.swift in Sources */,
 				4F71E20820CEC1E6007A30C8 /* ProfileVC.swift in Sources */,
-				4F153ADD20CAC117003D14EB /* VPMOTPTextField.swift in Sources */,
 				4F71E1F020CE9D1B007A30C8 /* AboutFametaleScreen.swift in Sources */,
 				4F71E20B20CED2A4007A30C8 /* EditProfileVC.swift in Sources */,
 				4F71E1E120CE8765007A30C8 /* TopOfDayTableVC.swift in Sources */,
@@ -800,6 +803,7 @@
 				4F646EBC20CBAF53003F03F0 /* HomeVC.swift in Sources */,
 				4F542AC720CE5A4C00FB5872 /* TagTableVC.swift in Sources */,
 				4F542AC920CE5E0000FB5872 /* CategoryTableVC.swift in Sources */,
+				4FC9967220DBB57A00844884 /* VPMOTPView.swift in Sources */,
 				4F92EA3920CC03750063CFAA /* CommentsVC.swift in Sources */,
 				4F71E1FF20CEB6DE007A30C8 /* ChatVC.swift in Sources */,
 				4F71E1ED20CE9741007A30C8 /* MoreTableViewCell.swift in Sources */,

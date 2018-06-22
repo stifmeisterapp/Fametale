@@ -46,6 +46,13 @@ class ShareScreenVC: UIViewController {
     
     //MARK:- ACTIONS
     //MARK:
+    
+    
+    
+    @IBAction func btnNavigationTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
    
     
     

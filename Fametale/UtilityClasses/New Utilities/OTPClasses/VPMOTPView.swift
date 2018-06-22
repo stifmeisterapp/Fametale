@@ -91,7 +91,7 @@ class VPMOTPView: UIView {
     var cursorColor: UIColor = UIColor(red: 74.0/255, green: 192.0/255, blue: 194.0/255, alpha: 1.0)
     
     /// Defines the size of OTP field. Defaults to `60`.
-    var otpFieldSize: CGFloat = 60
+    var otpFieldSize: CGFloat = 40
     
     
     /// Space between 2 OTP field. Defaults to `20`.
@@ -316,6 +316,15 @@ extension VPMOTPView: UITextFieldDelegate {
             else {
                 textField.backgroundColor = otpFieldEnteredBackgroundColor
                 textField.layer.borderColor = otpFieldEnteredBorderColor.cgColor
+                //tarun is adding below code
+                textField.layer.shadowRadius = 3.0
+                //  textField.layer.shadowColor = UIColor.blue.cgColor
+                textField.layer.shadowColor = UIColor(red: 74.0/255, green: 192.0/255, blue: 194.0/255, alpha: 1.0).cgColor
+                textField.layer.shadowOffset = CGSize(width: 1, height: 1)
+                textField.layer.shadowOpacity = 1.0
+                textField.backgroundColor = UIColor.white
+                textField.layer.borderColor = UIColor.clear.cgColor
+                
             }
             
             let nextOTPField = viewWithTag(textField.tag + 1)
@@ -342,6 +351,12 @@ extension VPMOTPView: UITextFieldDelegate {
             else {
                 textField.backgroundColor = otpFieldDefaultBackgroundColor
                 textField.layer.borderColor = otpFieldDefaultBorderColor.cgColor
+                //tarun is adding below code
+                textField.layer.shadowRadius = 0.0
+                textField.layer.shadowColor = UIColor.clear.cgColor
+                textField.layer.shadowOffset = CGSize(width: 0, height: 0)
+                textField.layer.shadowOpacity = 0.0
+                 textField.layer.borderColor = UIColor(red: 239.0/255, green: 239.0/255, blue: 239.0/255, alpha: 1.0).cgColor
             }
             
             let prevOTPField = viewWithTag(textField.tag - 1)
